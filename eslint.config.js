@@ -20,6 +20,18 @@ export default defineConfig([
       ecmaVersion: 2023,
       globals: globals.browser,
     },
+    rules: {
+      'no-empty': ['error', { allowEmptyCatch: true }],
+      '@typescript-eslint/no-empty-object-type': [
+        'error',
+        { allowInterfaces: 'with-single-extends' },
+      ],
+    },
   },
   prettier,
+  {
+    rules: {
+      curly: ['error', 'all'],
+    },
+  },
 ])
